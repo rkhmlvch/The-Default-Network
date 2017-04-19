@@ -10,6 +10,8 @@
 	infinite scroll v 2.0b2.110713
     developed by mark boyce
 	http://boyce.io/
+	edited by Sergey Rakhmalevich
+	https://vk.com/rakhmalevich
 -->
 
 <html>
@@ -80,7 +82,7 @@
 
 <!--	links	-->
 
-<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA////AD8/PwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiIiIiIiIiIiIiIiIREREREREiIhAAAAAAASIiEBEREREBIiIQEiIiIQEiIhASIiIhASIiEBIhEiEBIiIQEiESIQEiIhASIiIhASIiEBIiIiEBIiIQEREREQEiIhAAAAAAASIiERERERERIiIiIiIiIiIiIiIiIiIiIiIAAAAAAAAAAAAAAAAf+AAAEAgAABAIAAAQCAAAEAgAABAIAAAQCAAAEAgAABAIAAAf+AAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
+<link href="https://raw.githubusercontent.com/xSOADx/The-Default-Network/master/rounded_corners.ico" rel="icon" type="image/x-icon" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
 
 <!--	theme css	-->
