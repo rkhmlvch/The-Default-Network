@@ -26,14 +26,14 @@
 <meta name="color:Page Background Color" content="#ffffff" />
 <meta name="color:Body Color" content="#333333" />
 <meta name="color:Link Color" content="#333333" />
-<meta name="color:Link Hover Color" content="#999999" />
+<meta name="color:Link Hover Color" content="#899999" />
 <meta name="color:Meta Color" content="#999999" />
 <meta name="color:Meta Hover Color" content="#333333" />
 <meta name="color:Separator Color" content="#bebebe" />
 <meta name="color:Navigation Color" content="#999999" />
 <meta name="color:Navigation Hover Color" content="#333333" />
 <meta name="image:Header" content="" />
-<meta name="font:Body Font" content=" 'helvetica', helvetica neue, arial, sans-serif; " />
+<meta name="font:Body Font" content=" 'helvetica', helvetica neue, Europa, arial, sans-serif; " />
 <meta name="font:Heading Font" content=" 'helvetica', helvetica neue, arial, sans-serif; " />
 <meta name="font:Meta Font" content=" 'helvetica', helvetica neue, arial, sans-serif; " />
 <meta name="if:Show Header" content="1" />
@@ -91,7 +91,7 @@
 
 /*	reset	*/
 
-html,body,p,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,img,ins,kbd,q,s,samp,small,strike,sub,submit,sup,tt,var,u,,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}:focus{outline:0;}
+html,body,p,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,submit,sup,tt,var,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}:focus{outline:0;}
 
 /*	base styles		*/
 
@@ -145,7 +145,7 @@ p{
 	a,
 	a:visited{
 	text-decoration:underline; 
-	color:{color:Link Color}; 
+	color:{color:Link Color};
 	}
 	a:hover{
 	color:{color:Link Hover Color}; 
@@ -305,7 +305,7 @@ p{
 	img {
 	max-width:100%;
 	height:auto;
-	display:block;
+	display:inline;
 	}
 	
 	{block:IfCenterAlignPage}
@@ -392,11 +392,26 @@ position: fixed;
 bottom: 5px;
 right: 5px;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
 .media {
    text-align:center
 }
+.reblog {
+    position: absolute
+    text-align:center
+}
 .media {
    page-align:center
+}
+ul {    
+    border-bottom: 1px dotted #000;
+    text-decoration: none;
 }
 </style>
 
@@ -451,6 +466,11 @@ right: 5px;
 					</div>
 				</div>
 			{/block:Title}
+			
+			<a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
+            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
+            </div>
+			
 		{/block:Text}
 			
 		{block:Chat}
@@ -461,6 +481,11 @@ right: 5px;
 					</div>
 				</div>
 			{/block:Title}
+			
+			<a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
+            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
+            </div>
+			
 		{/block:Chat}
 
 		{block:Quote}
@@ -477,6 +502,11 @@ right: 5px;
 					<a href="{URL}" {Target}>&#149; {Name}</a>
 				</div>
 			</div>
+			
+			<a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
+            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
+            </div>
+			
 		{/block:Link}
 
 		{block:Photo}
@@ -484,6 +514,11 @@ right: 5px;
 			{LinkOpenTag}
 				<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
 			{LinkCloseTag}
+			</div>
+			
+			<div class="Reblog"> 
+            <a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
+            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
 			</div>
 		{/block:Photo}
 
@@ -495,6 +530,11 @@ right: 5px;
 				{LinkCloseTag}
 				</div>
 			{/block:Photos}
+			
+			<a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
+            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
+            </div>
+			
 		{/block:Photoset}
 
 		{block:Audio}
@@ -509,12 +549,21 @@ right: 5px;
 				{AudioPlayerBlack}
 				</div>
 			</div>
+			
+			<a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
+            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
+			
 		{/block:Audio}
 
 		{block:Video}
 			<div class="media">
 				{Video-500}
 			</div>
+			
+			<a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
+            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
+            </div>
+			
 		{/block:Video}
 
 		{block:IfShowPostText}
@@ -575,7 +624,7 @@ right: 5px;
 					{/block:Date}
 				{/block:IfShowDateInPosts}
 			{/block:IndexPage}
-
+			
 			{block:IfShowTagsInPosts}
 				{block:HasTags}
 					<div class="meta">{lang:Tags}</div>
@@ -720,5 +769,7 @@ right: 5px;
     	{/block:IfShowEndlessScrolling}
     })(jQuery);
 	</script>
+	<script src="https://use.typekit.net/fbp2dgi.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </body>
 </html>
