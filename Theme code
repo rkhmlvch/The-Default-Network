@@ -466,11 +466,6 @@ ul {
 					</div>
 				</div>
 			{/block:Title}
-			
-			<a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
-            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
-            </div>
-			
 		{/block:Text}
 			
 		{block:Chat}
@@ -481,11 +476,6 @@ ul {
 					</div>
 				</div>
 			{/block:Title}
-			
-			<a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
-            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
-            </div>
-			
 		{/block:Chat}
 
 		{block:Quote}
@@ -502,11 +492,6 @@ ul {
 					<a href="{URL}" {Target}>&#149; {Name}</a>
 				</div>
 			</div>
-			
-			<a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
-            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
-            </div>
-			
 		{/block:Link}
 
 		{block:Photo}
@@ -514,11 +499,6 @@ ul {
 			{LinkOpenTag}
 				<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
 			{LinkCloseTag}
-			</div>
-			
-			<div class="Reblog"> 
-            <a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
-            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
 			</div>
 		{/block:Photo}
 
@@ -530,11 +510,6 @@ ul {
 				{LinkCloseTag}
 				</div>
 			{/block:Photos}
-			
-			<a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
-            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
-            </div>
-			
 		{/block:Photoset}
 
 		{block:Audio}
@@ -549,21 +524,12 @@ ul {
 				{AudioPlayerBlack}
 				</div>
 			</div>
-			
-			<a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
-            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
-			
 		{/block:Audio}
 
 		{block:Video}
 			<div class="media">
 				{Video-500}
 			</div>
-			
-			<a target="_blank" href="{ReblogURL}" title="Reblog this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="32" height="32"></a>
-            <a target="_blank" href="{LikeURL}" title="Like this post"><img scr="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="32" height="32" ></a>
-            </div>
-			
 		{/block:Video}
 
 		{block:IfShowPostText}
@@ -607,7 +573,6 @@ ul {
 		{/block:Chat}
 
 		{block:IfShowPostMeta}
-		<div class="col">
 			<div class="postmeta">
 
 			{block:Audio}
@@ -647,13 +612,11 @@ ul {
 					<div class="meta"><a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></div>
 				{/block:ContentSource}
 			{/block:IfShowContentSourceInPosts}
-
 			</div>
-		</div>
+			<div class="meta"><a target="_blank" href="{ReblogURL}" title="Reblog this post"><img src="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="16" height="16"></a>
+            <a target="_blank" href="{LikeURL}" title="Like this post"><img src="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="16" height="16" ></a></div>
 		{/block:IfShowPostMeta}
-
 		</div>
-
 		</div>
 	{/block:Posts}
 
