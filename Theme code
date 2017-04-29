@@ -125,7 +125,6 @@ p{
 {block:IfShowHeadingInUppercase}.heading{ text-transform:uppercase; }{/block:IfShowHeadingInUppercase}
 {block:IfShowHeadingInBold}.heading{ font-weight:bold; }{/block:IfShowHeadingInBold}
 
-
 	.description{
 		font:{text:Description Font Size}px {font:Description Font};
 		line-height:{text:Description Line Height}px;
@@ -392,26 +391,16 @@ position: fixed;
 bottom: 5px;
 right: 5px;
 }
-
 body {
     margin: 0;
     padding: 0;
     text-align: center;
 }
-
 .media {
    text-align:center
 }
-.reblog {
-    position: absolute
-    text-align:center
-}
 .media {
    page-align:center
-}
-ul {    
-    border-bottom: 1px dotted #000;
-    text-decoration: none;
 }
 </style>
 
@@ -610,11 +599,13 @@ ul {
 				{block:ContentSource}
 					<div class="meta">{lang:Source}</div>
 					<div class="meta"><a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></div>
+					<div class="col">
+				<div class="meta" title="Reblog this post"><a target="_blank" href="{ReblogURL}"><img src="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="16" height="16"></a><a target="_blank" href="{LikeURL}" title="Like this post"><img src="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="16" height="16"></a></div>
+            <div class="clear"></div>
+			        </div>
 				{/block:ContentSource}
 			{/block:IfShowContentSourceInPosts}
 			</div>
-			<div class="meta"><a target="_blank" href="{ReblogURL}" title="Reblog this post"><img src="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="16" height="16"></a>
-            <a target="_blank" href="{LikeURL}" title="Like this post"><img src="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="16" height="16" ></a></div>
 		{/block:IfShowPostMeta}
 		</div>
 		</div>
