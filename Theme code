@@ -436,7 +436,7 @@ body {
         {/block:TagPage}
 
 	{block:Posts}
-	<div class="post">
+	<div id="post">
 
 		{block:IfShowPostSeparator}
 		<div class="row">
@@ -605,11 +605,11 @@ body {
 			{/block:IfShowContentSourceInPosts}
 		{/block:IfShowPostMeta}
 		</div>
+		   
 		    <div class="buttons">{likebutton}</div>
             <div class="buttons">{reblogbutton}</div>
-		    
-		</div>
 
+		</div>
 	{/block:Posts}
 
 		{block:IndexPage}
@@ -649,8 +649,9 @@ body {
 				{/block:PostNotes}
 			{/block:IfShowNotesInPosts}
 		{/block:PermalinkPage}
-
-    </div>
+		
+		</div>
+		
 
 		{block:IfShowBottom}
 			<div class="bottom">
@@ -660,7 +661,7 @@ body {
 							<div class="separator"></div>
 						{/block:IfShowPostSeparator}	
                         <div class="text1"><b>Sergey Rakhmalevich</b></div>
-                        <div class="text2">All rights belong to their respective owners.</div>
+                        <div class="text2">All rights belong to their       respective owners.</div>
                         <div class="signoff">{text:Bottom Copy}</div>
                         <div class="text3">{text:RSS}</div>
         			</div>
@@ -710,7 +711,7 @@ body {
 					nextSelector: '.next',
 					itemSelector: '#wrapper > #post',
 						loading: {
-						img: false,
+						img: true,
 						msgText: '<div class="row"><div class="col">Loading...</div></div>',
 						finishedMsg: '<div class="row"><div class="col">The End.</div></div>'
 						}
@@ -724,7 +725,5 @@ body {
     	{/block:IfShowEndlessScrolling}
     })(jQuery);
 	</script>
-	<script src="https://use.typekit.net/fbp2dgi.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </body>
 </html>
