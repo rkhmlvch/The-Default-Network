@@ -512,6 +512,7 @@ body {
 					{/block:IfShowAlbumArt}
 				{AudioPlayerBlack}
 				</div>
+				</div>
 			</div>
 		{/block:Audio}
 
@@ -599,15 +600,13 @@ body {
 				{block:ContentSource}
 					<div class="meta">{lang:Source}</div>
 					<div class="meta"><a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></div>
-			        </div>
-			        
 				{/block:ContentSource}
 			{/block:IfShowContentSourceInPosts}
-			</div>
 		{/block:IfShowPostMeta}
+		</div>
+		</div>
 		    <div class="buttons">{likebutton}</div>
             <div class="buttons">{reblogbutton}</div>
-		</div>
 		</div>
 	{/block:Posts}
 
