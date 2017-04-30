@@ -408,6 +408,7 @@ body {
 <script type="text/javascript" src="http://static.tumblr.com/ikeq9mi/DfYl6o46t/scrolltotop.min.js"></script>
 <a href="javascript:;" id="scrollToTop" rel="nofollow" title="Go to Top"><img src="http://68.media.tumblr.com/8073fb727b74c749a2dfb7049972efc6/tumblr_inline_mj3yo2Mkgf1qz4rgp.png" title="Go to Top" alt="Go to Top"/></a>
 
+
 </head>
 	<body>
 
@@ -599,12 +600,12 @@ body {
 				{block:ContentSource}
 					<div class="meta">{lang:Source}</div>
 					<div class="meta"><a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></div>
-					<div class="col">
-				<div class="meta" title="Reblog this post"><a target="_blank" href="{ReblogURL}"><img src="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Share-icon.png" width="16" height="16"></a><a target="_blank" href="{LikeURL}" title="Like this post"><img src="https://raw.githubusercontent.com/xSOADx/The-Default-Network/e51b9af2c72fc80f3daebc0996043bf1a05185e5/Messaging-Like-icon.png" width="16" height="16"></a></div>
-            <div class="clear"></div>
 			        </div>
+			        
 				{/block:ContentSource}
 			{/block:IfShowContentSourceInPosts}
+			<div id="buttons">{likebutton}</div>
+            <div id="buttons">{reblogbutton}</div>
 			</div>
 		{/block:IfShowPostMeta}
 		</div>
