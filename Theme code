@@ -5,10 +5,10 @@
 	http://thedefaultnetwork.tumblr.com/
 	tumblr theme #33653
 	http://www.tumblr.com/theme/33653
-    included plugins
+        included plugins
 	fidvids v 1.0
 	infinite scroll v 2.0b2.110713
-    developed by mark boyce
+        developed by mark boyce
 	http://boyce.io/
 	edited by Sergey Rakhmalevich
 	https://vk.com/rakhmalevich
@@ -280,6 +280,7 @@ p{
 
 							.postmeta{
 							max-width:{text:Column Width}px;
+							margin:0 auto;
 							}
 							
 								.bottom{
@@ -391,6 +392,7 @@ position: fixed;
 bottom: 5px;
 right: 5px;
 }
+.buttons { display: inline-block; margin: 5px; }
 body {
     margin: 0;
     padding: 0;
@@ -411,12 +413,9 @@ body {
 
 </head>
 	<body>
-
 	<div id="wrapper">
 
 		{block:IfShowHeader}
-
-
 
 			<div class="row">
 				<div class="col">
@@ -437,7 +436,7 @@ body {
         {/block:TagPage}
 
 	{block:Posts}
-	<div id="post">
+	<div class="post">
 
 		{block:IfShowPostSeparator}
 		<div class="row">
@@ -604,8 +603,8 @@ body {
 			        
 				{/block:ContentSource}
 			{/block:IfShowContentSourceInPosts}
-			<div id="buttons">{likebutton}</div>
-            <div id="buttons">{reblogbutton}</div>
+			<div class="buttons">{likebutton}</div>
+            <div class="buttons">{reblogbutton}</div>
 			</div>
 		{/block:IfShowPostMeta}
 		</div>
@@ -650,7 +649,7 @@ body {
 			{/block:IfShowNotesInPosts}
 		{/block:PermalinkPage}
 
-	</div>
+    </div>
 
 		{block:IfShowBottom}
 			<div class="bottom">
