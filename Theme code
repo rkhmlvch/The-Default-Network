@@ -11,7 +11,7 @@
     developed by mark boyce
 	http://boyce.io/
 	edited by Sergey Rakhmalevich
-	https://vk.com/rakhmalevich
+	https://t.me/Sergey_Rakhmalevich
 -->
 
 <html>
@@ -514,6 +514,7 @@ body {
 				</div>
 				</div>
 			</div>
+			</div>
 		{/block:Audio}
 
 		{block:Video}
@@ -604,10 +605,11 @@ body {
 			{/block:IfShowContentSourceInPosts}
 		{/block:IfShowPostMeta}
 		</div>
-		</div>
 		    <div class="buttons">{likebutton}</div>
             <div class="buttons">{reblogbutton}</div>
+		    
 		</div>
+
 	{/block:Posts}
 
 		{block:IndexPage}
