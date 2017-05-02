@@ -392,7 +392,6 @@ position: fixed;
 bottom: 5px;
 right: 5px;
 }
-.buttons { display: inline-block; margin: 5px; }
 body {
     margin: 0;
     padding: 0;
@@ -400,8 +399,6 @@ body {
 }
 .media {
    text-align:center
-}
-.media {
    page-align:center
 }
 </style>
@@ -409,7 +406,7 @@ body {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://static.tumblr.com/ikeq9mi/DfYl6o46t/scrolltotop.min.js"></script>
 <a href="javascript:;" id="scrollToTop" rel="nofollow" title="Go to Top"><img src="http://68.media.tumblr.com/8073fb727b74c749a2dfb7049972efc6/tumblr_inline_mj3yo2Mkgf1qz4rgp.png" title="Go to Top" alt="Go to Top"/></a>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.js"></script>
 
 </head>
 	<body>
@@ -514,7 +511,6 @@ body {
 				</div>
 				</div>
 			</div>
-			</div>
 		{/block:Audio}
 
 		{block:Video}
@@ -562,6 +558,7 @@ body {
 				<p>{block:Lines}{block:Label}{Label} {/block:Label}{Line}<br/>{/block:Lines}</p>
 			</div>
 		{/block:Chat}
+		
 
 		{block:IfShowPostMeta}
 			<div class="postmeta">
@@ -603,14 +600,13 @@ body {
 					<div class="meta"><a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></div>
 				{/block:ContentSource}
 			{/block:IfShowContentSourceInPosts}
+			</div>
 		{/block:IfShowPostMeta}
 		</div>
-		   
-		    <div class="buttons">{likebutton}</div>
-            <div class="buttons">{reblogbutton}</div>
-
 		</div>
 	{/block:Posts}
+	
+	</div>
 
 		{block:IndexPage}
 			{block:Pagination}
@@ -702,7 +698,7 @@ body {
 				});
 			});
 		});
-
+		
 		{block:IfShowEndlessScrolling}
     	{block:IndexPage}
     		$(function() {
@@ -711,7 +707,7 @@ body {
 					nextSelector: '.next',
 					itemSelector: '#wrapper > #post',
 						loading: {
-						img: true,
+						img: false,
 						msgText: '<div class="row"><div class="col">Loading...</div></div>',
 						finishedMsg: '<div class="row"><div class="col">The End.</div></div>'
 						}
