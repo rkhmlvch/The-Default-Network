@@ -398,8 +398,8 @@ body {
     text-align: center;
 }
 .media {
-   text-align:center
-   page-align:center
+   text-align:center;
+   display: inline;
 }
 </style>
 
