@@ -384,7 +384,6 @@ p{
 <!--	custom css	-->
 
 <style type="text/css" media="screen">
-{CustomCSS}
 #scrollToTop:link, 
 #scrollToTop:visited {
 display: none;
@@ -415,6 +414,7 @@ body {
 .lightbox-caption, #tumblr_lightbox_caption {
     visibility:hidden;
 }
+{CustomCSS}
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -645,8 +645,8 @@ body {
 			{block:PermalinkPagination}
 				<div class="row">
 				<div class="col">
-					{block:PreviousPost}<a href="{PreviousPost}" class="prev">Previous Post</a>{/block:PreviousPost}
-					{block:NextPost}<a href="{NextPost}" class="next">Next Post</a>{/block:NextPost}
+					{block:PreviousPost}<a href="{PreviousPost}" class="prev"><b> << </b>Previous Post</a>{/block:PreviousPost}
+					{block:NextPost}<a href="{NextPost}" class="next">Next Post <b> >> </b></a>{/block:NextPost}
 				</div>
 				</div>
 			{/block:PermalinkPagination}
