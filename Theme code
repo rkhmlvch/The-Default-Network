@@ -208,7 +208,7 @@ p{
 			}
 				blockquote{
 				border-left:solid 1px {color:Body Color};
-				padding-left:15px;
+				padding-left:1px;
 				margin-bottom:15px;
 				}
 					li.note.more_notes_link_container{
@@ -510,12 +510,8 @@ body {
 
 		{block:Photoset}
 			{block:Photos}
-				<div class="media">
-				{LinkOpenTag}
-					<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
-				{LinkCloseTag}
-				</div>
-			{/block:Photos}
+		<a href="{permalink}"><img src="{PhotoURL-500}" style="padding:3px;"/></a>
+            {/block:Photos}
 		{/block:Photoset}
 
 		{block:Audio}
