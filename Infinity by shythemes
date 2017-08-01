@@ -6,7 +6,7 @@
  
  
  
-                infinity @ by shythemes
+                infinity @ shythemes
  
  
  
@@ -14,7 +14,8 @@
 -->
 <title>{title}</title>
 <link rel="alternate" type="application/rss+xml" href="{rss}">
-<link rel="shortcut icon" href="{favicon}">
+<link href="https://raw.githubusercontent.com/xSOADx/The-Default-Network/master/rounded_corners.ico" rel="icon" type="image/x-icon" />
+<link href="https://fonts.googleapis.com/css?family=ABeeZee|Rock+Salt" rel="stylesheet">
 {block:description}<meta name="description" content="{metadescription}">{/block:description}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color:background" content="#ffffff">
@@ -22,11 +23,6 @@
 <meta name="color:light" content="#9f9f9f">
 <meta name="color:link hover" content="#9f9f9f">
 <meta name="color:lightbox" content="#f8f8f8">
-<meta name="select:font" content="open-sans" title="Open Sans">
-<meta name="select:font" content="lato" title="Lato">
-<meta name="select:font" content="lora" title="Lora">
-<meta name="select:font" content="inconsolata" title="Inconsolata">
-<meta name="select:font" content="courier-prime" title="Courier Prime">
 <meta name="select:posts" content="250" title="250px"/>
 <meta name="select:posts" content="300" title="300px"/>
 <meta name="select:posts" content="350" title="350px"/>
@@ -34,6 +30,7 @@
 <meta name="select:posts" content="450" title="450px"/>
 <meta name="select:posts" content="500" title="500px"/>
 <meta name="select:posts" content="540" title="540px"/>
+<meta name="select:posts" content="640" title="640px"/>
 <meta name="select:posts" content="1024" title="1024px"/>
 <meta name="select:margins" content="75" title="75px"/>
 <meta name="select:margins" content="100" title="100px"/>
@@ -71,8 +68,6 @@
 <meta name="text:link 6" content="">
 <meta name="text:link 6 url" content="">
 <script src="//use.edgefonts.net/{select:font}:n4,n5,i4,n7,i7.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js"></script>
-<link href="https://raw.githubusercontent.com/xSOADx/The-Default-Network/master/rounded_corners.ico" rel="icon" type="image/x-icon" />
  
 <style type="text/css">
 ::-webkit-scrollbar {
@@ -92,6 +87,8 @@
    min-height:24px;
    min-width:24px;
 }
+#loading { position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 9999; background: url(https://raw.githubusercontent.com/xSOADx/The-Default-Network/master/ring.gif) 50% 50% no-repeat #111; background-size:150px; background-color: white; }
+
 html {
     width:100%;
     height:100%;
@@ -112,7 +109,7 @@ pre {
     font-family:courier-prime, monospace;
 }
 small, sub {
-    font-size:1em;
+    font-size:1.1em;
     vertical-align:baseline;
 }
 blockquote {
@@ -130,7 +127,7 @@ blockquote, ol, ul, p, pre {
 }
 h1, h2, h3, h4, h5, h6 {
     margin:0 0 1.6em;
-    font-size:1em;
+    font-size:1.2em;
     font-weight:inherit;
 }
 ul {
@@ -155,28 +152,28 @@ hr {
 }
  
 /* typography */
- 
 html, body {
-    font-size:13px;
-    line-height:1.6em;
+    font-size:12px;
+    line-height:1.3em;
     -moz-osx-font-smoothing:grayscale;
     -webkit-font-smoothing:antialiased;
     font-smoothing:antialiased;
     word-break: break-word;
-    font-family:{select:font}, sans-serif;
+    font-family: 'ABeeZee', sans-serif;
     {block:ifOtherFont}
-    font-family:{text:other font}, {select:font}, sans-serif;
+    font-family: 'ABeeZee', sans-serif;
     {/block:ifOtherFont}
     {block:ifFontSize}
     font-size:{text:font size};
     {/block:ifFontSize}
 }
 .title {
-    font-style:italic;
+    font-style:normal;
     color:{color:text};
+    font-family: 'Rock Salt', cursive;
 }
 h1.title {
-    font-size:1.2em;
+    font-size:1.3em;
     margin-bottom:1.33em;
 }
 .light, .light a, .tumblr_blog {
@@ -235,8 +232,9 @@ aside, footer {
     margin:0 {select:margins}px 0 -300px;
 }
 #title {
-    font-size:1.3em;
+    font-size:1.6em;
     border-bottom:0;
+    text-transform: normal;
 }
 aside .title + nav {
     margin-top:1.2em!important;
@@ -284,22 +282,22 @@ nav li {
     {/block:ifNotCenterContent}
     {block:ifCenterContent}
     {block:PermalinkPage}
-    width:auto;
-    max-width:540px;
+    max-width:800px;
     margin: 0 auto {select:margins}px;
     padding-right:{select:margins}px;
+    position:center;
     {/block:PermalinkPage}
     {/block:ifCenterContent}
 }
 {block:IndexPage}
 .content {
-    font-size:0;
+    font-size:1.1;
 }
 .entry {
     opacity:0;
     z-index:-1;
     display:inline-block;
-    font-size:13px;
+    font-size:11px;
     {block:ifFontSize}
     font-size:{text:font size};
     {/block:ifFontSize}
@@ -525,12 +523,15 @@ footer {
 #infscr-loading {
     display:none!important;
 }
- 
+
 </style>
 <link href="http://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript"> $(window).load(function() { $("#loading").delay(0).fadeOut("slow"); }) </script>
 </head>
 <body>
 <div class="main">
+<div id="loading"></div>
 <aside class="{block:ifSidebar}sidebar{/block:ifSidebar}{block:ifNotSidebar}header{/block:ifNotSidebar}">
     <div class="title text"><a href="/" id="title">{Title}</a></div>
     {block:Description}<p class="description text">{Description}</p>{/block:Description}
@@ -658,7 +659,7 @@ footer {
 </footer>
 {/block:Pagination}
 </div>
-<a target="_blank" href="http://shythemes.tumblr.com" id="theme" class="light" title="theme">k.</a>
+<a target="_blank" href="http://shythemes.tumblr.com" id="theme" class="light" title="Author of theme">k.</a>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="http://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script>
 <script src ="//static.tumblr.com/fwgzvyf/l6jnyutne/shythemes.vr.js"></script>
